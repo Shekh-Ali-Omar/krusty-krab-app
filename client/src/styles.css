@@ -1,0 +1,384 @@
+:root {
+  --bg: radial-gradient(circle at top left, #ffe08a, #f4f7fb 40%, #b8e6ff 100%);
+  --primary: #ff7b7b;
+  --primary-dark: #ff5c5c;
+  --accent: #1f8efa;
+  --text-main: #102a43;
+  --surface: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 1rem 1.8rem;
+  background: linear-gradient(135deg, #ff7b7b, #ffb347);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.logo-title {
+  margin: 0;
+}
+
+.logo-subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.app-main {
+  flex: 1;
+  padding: 1.5rem min(4vw, 2.5rem);
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section {
+  background-color: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(15, 52, 96, 0.18);
+  padding: 0.9rem 1.1rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.section-subtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.87rem;
+  color: #5c6f82;
+}
+
+.hero {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(15, 52, 96, 0.18);
+}
+
+.hero-text {
+  margin-top: 0.4rem;
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.7rem;
+}
+
+.stat-card {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  box-shadow: 0 2px 6px rgba(15, 52, 96, 0.18);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #5c6f82;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 0.8rem 0.9rem;
+  box-shadow: 0 2px 6px rgba(15, 52, 96, 0.18);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-header h4 {
+  margin: 0;
+}
+
+.card-description {
+  margin: 0.35rem 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+.card-image-placeholder {
+  width: 100%;
+  border-radius: 8px;
+  background: radial-gradient(circle at top, #ffe08a, #ffb3b3);
+  padding: 1.1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.price-badge {
+  background-color: #ffe08a;
+  color: #8a4b12;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ingredients {
+  font-size: 0.8rem;
+  color: #52606d;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn.primary {
+  background-color: var(--primary);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid #cbd2e1;
+}
+
+.icon-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  background-color: #e5ebff;
+  cursor: pointer;
+}
+
+.icon-btn.danger {
+  background-color: #ffe4e4;
+  color: #b00020;
+}
+
+.search-input,
+input,
+textarea {
+  border-radius: 6px;
+  border: 1px solid #cbd2e1;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.search-input {
+  min-width: 200px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid #e0e6f0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 1rem;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.customer-card {
+  padding: 0.6rem 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background-color: #e0f2ff;
+  font-size: 0.75rem;
+}
+
+.order-builder-drop {
+  border-radius: 8px;
+  border: 2px dashed #cbd2e1;
+  padding: 0.8rem 0.9rem;
+  background-color: #f8fbff;
+}
+
+.order-builder-drop--active {
+  border-color: var(--accent);
+  background-color: #e6f2ff;
+}
+
+.order-item-controls {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.4rem;
+}
+
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.7rem 0 0.4rem;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+}
+
+.modal-panel {
+  position: relative;
+  max-width: 430px;
+  margin: 10vh auto;
+  background-color: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.45);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, var(--accent), #00c2ff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.modal-body {
+  padding: 0.85rem 1rem 0.9rem;
+}
+
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  padding-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .split-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+}
+
+
